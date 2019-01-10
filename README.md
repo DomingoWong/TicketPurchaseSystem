@@ -18,7 +18,7 @@ You *must* complete all of the following required features for a total of 55 poi
 |   5    |       Transfer tickets       | Allow the user to transfer tickets to another user.          |
 |   5    | Relational database - Users  | Use a relational database to store *user account* data.      |
 |   5    | Relational database - Events | Use a relational database to store *event* data.             |
-|   5    |          Deployment          | Your solution must be deployed on the microcloud on your [primary node](https://github.com/CS601-F18/notes/blob/master/admin/mcassignments.md) port **7070** prior to your interactive grading appointment. |
+|   5    |          Deployment          | Deployment.                                                  |
 
 You may use additional database tables.
 
