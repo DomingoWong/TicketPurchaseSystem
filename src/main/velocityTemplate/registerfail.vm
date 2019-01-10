@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Register Failed</title>
+<body>
+<h2>Sorry, your information is not valid, please <br>
+1. check your email format <br>
+2. set appropriate username and password <br>
+If you comfirmed your email format, this email might be registered, please try another email.</h2>
+
+<form action="/register" method="post">
+  Email:<br>
+  <input type="text" name="email" placeholder="Enter email">
+  <br>
+  Username:<br>
+  <input type="text" name="username" placeholder="Enter username">
+  <br>
+  Password:<br>
+  <input type="password" name="password" placeholder="Enter password">
+  <br><br>
+  <input type="submit" value="Sign Up">
+</form> 
+
+</body>
+</html>

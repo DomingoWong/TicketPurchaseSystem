@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>User: $user.Email
+Infomation Modify</title>
+<head>
+<style>
+input[type=submit] {
+    text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h2>Welcome, $user.Username
+</h2>
+
+<br>
+Email: $user.Email
+<br>
+
+click this button to submit your modify.
+<form action="/reseteventinfo" method="post">
+  Name:<br>
+  <input type="text" name="name" value=$event.Name>
+  <br>
+  Description:<br>
+  <input type="text" name="description" value=$event.Description>
+  <br>
+  Ticket price:<br>
+  <input type="number" name="price" value=$event.Price>
+  <br><br>
+  <input type="hidden" name="eventId" value=$event.EventId>
+  <input type="submit" value="Modify Event">
+</form>
+<form action="/deleteevent" method="post">
+    <input type="hidden" name="eventId" value=$event.EventId>
+    <input type="submit" value="Delete Event">
+</form>
+</body>
+</html>

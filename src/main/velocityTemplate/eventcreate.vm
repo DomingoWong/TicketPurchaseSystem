@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>Create Event</title>
+<body>
+<h2>Create Event</h2>
+
+<form action="/createevent" method="post">
+  Name:<br>
+  <input type="text" name="name" placeholder="Enter event name">
+  <br>
+  Description:<br>
+  <input type="text" name="description" placeholder="Enter description">
+  <br>
+  Ticket price:<br>
+  <input type="number" name="price" placeholder="Enter price">
+  <br><br>
+  <input type="submit" value="Create Event">
+</form> 
+
+<form action="/userhome" method="get">
+  <input type="submit" value="Home Page">
+</form> 
+
+</body>
+</html>

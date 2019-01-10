@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<title>Register Success</title>
+<body>
+<h2>Register Success</h2>
+
+<form action="/login" method="get">
+    Click the button to login
+  <input type="submit" value="Login">
+</form> 
+
+</body>
+</html>

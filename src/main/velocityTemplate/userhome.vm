@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>User: $user.Username</title>
+<head>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+input[type=submit] {
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+</style>
+</head>
+<body>
+	<h2>Welcome, $user.Username</h2>
+
+	<br> Email: $user.Email
+	<br>
+
+	<br> click this button to modify your information.
+	<form action="/resetuserinfo" method="get">
+		<input type="submit" value="Modify User Information">
+	</form>
+	<br>
+
+	<h2>All events you created:</h2>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Owner</th>
+			<th>Price</th>
+			<th>Modify</th>
+		</tr>
+		#foreach( $event in $event )
+		<tr>
+			<th>$event.Name</th>
+			<th>$event.Description</th>
+			<th>$event.Owner</th>
+			<th>$event.Price</th>
+			<th><form action="/reseteventinfo" method="get">
+					<input type="hidden" name="eventId" value=$event.EventId> <input
+						type="submit" value="Modify">
+				</form></th>
+		</tr>
+		#end
+
+	</table>
+
+	<form action="/logout" method="get">
+		<input type="submit" value="Logout">
+	</form>
+
+	<form action="/events" method="get">
+		<input type="submit" value="All Events">
+	</form>
+
+	<form action="/createevent" method="get">
+		<input type="submit" value="Create Event">
+	</form>
+	<br>
+	<br>
+	<h2>All tickets you hold:</h2>
+	<table>
+		<tr>
+			<th>Event Id</th>
+			<th>Event Name</th>
+			<th>Owner</th>
+			<th>Price</th>
+			<th>Transfer</th>
+		</tr>
+		#foreach( $ticket in $ticket )
+		<tr>
+			<th>$ticket.EventId</th>
+			<th>$ticket.EventName</th>
+			<th>$ticket.Owner</th>
+			<th>$ticket.Price</th>
+			<th>
+				<form action="/event" method="get">
+				<input type="hidden" name="eventId" value=$ticket.EventId>
+				<input type="submit" value="Detail">
+				</form>
+				<form action="/tickettransfer" method="get">
+					<input type="hidden" name="ticketId" value=$ticket.TicketId>
+					<input type="submit" value="Transfer">
+				</form>
+			</th>
+		</tr>
+		#end
+	</table>
+
+</body>
+</html>

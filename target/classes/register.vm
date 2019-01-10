@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>Register</title>
+<body>
+<h2>Register</h2>
+
+<form action="/register" method="post">
+  Email:<br>
+  <input type="text" name="email" placeholder="Enter email">
+  <br>
+  Username:<br>
+  <input type="text" name="username" placeholder="Enter username">
+  <br>
+  Password:<br>
+  <input type="password" name="password" placeholder="Enter password">
+  <br><br>
+  <input type="submit" value="Sign Up">
+</form> 
+
+<form action="/login" method="get">
+  <input type="submit" value="Login">
+</form> 
+
+</body>
+</html>

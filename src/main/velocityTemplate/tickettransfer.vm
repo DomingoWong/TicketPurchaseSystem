@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>Ticket Transfer</title>
+<head>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+input[type=submit] {
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+</style>
+</head>
+
+<body>
+	<h2>Ticket Transfer</h2>
+
+	<table>
+		<tr>
+			<th>Event Id</th>
+			<th>Event Name</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<th>$ticket.EventId</th>
+			<th>$ticket.EventName</th>
+			<th>$ticket.Price</th>
+		</tr>
+	</table>
+	
+	<form action="/tickettransfer" method="post">
+        Email:<br>
+        <input type="text" name="email" placeholder="Enter user's email">
+        <input type="hidden" name="ticketId" value=$ticket.TicketId>		
+		<br> <input type="submit" value="Transfer">
+	</form>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<title>Register Failed</title>
+<body>
+<h2>Sorry, the user is not exist, please try anain.<br>
+
+<form action="/userhome" method="get">
+  
+  <input type="submit" value="Home Page">
+</form> 
+
+</body>
+</html>

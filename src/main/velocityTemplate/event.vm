@@ -1,0 +1,75 @@
+<html>
+<title>Events $event.Name</title>
+
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+input[type=submit] {
+    text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h2>Hi, $user.Username</h2>
+<h2>Events: $event.Name</h2>
+<table>
+<tr><!-- first line -->
+<td colspan="2">Name</td>
+</tr>
+<tr><!-- second line -->
+<td colspan="2">$event.Name</td>
+</tr>
+<tr>
+<td colspan="2">Description</td>
+</tr>
+<tr>
+<td colspan="2">$event.Description</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>Price</td>
+</tr>
+<tr>
+<td>$event.Owner</td>
+<td>$event.Price</td>
+</tr>
+</table>
+<form action="/ticketpurchase" method="post">
+    <input type="hidden" name="eventId" value=$event.EventId>
+    <input type="hidden" name="email" value=$user.Email>
+    <input type="submit" value="Purchase">
+</form>
+<br>
+<br>
+<br>
+<form action="/userhome" method="get">
+    <input type="submit" value="Home page">
+</form>
+</body>
+</html>

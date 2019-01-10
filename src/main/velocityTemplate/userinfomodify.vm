@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>User: $user.Email
+Infomation Modify</title>
+<body>
+<h2>Welcome, $user.Username
+</h2>
+
+<br>
+Email: $user.Email
+<br>
+
+click this button to submit your modify.
+<form action="/resetuserinfo" method="post">
+  Username:<br>
+  <input type="text" name="username" placeholder="Enter username">
+  <br>
+  New Password:<br>
+  <input type="password" name="password" placeholder="Enter password">
+  <br><br>
+    <input type="submit" value="Modify">
+</form>
+
+</body>
+</html>
